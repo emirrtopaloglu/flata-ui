@@ -16,5 +16,4 @@ export const Primary = Template.bind({});
 Primary.args = {
   children: "Button",
   color: "blue",
-  className: "emir osman topaloglu"
 };

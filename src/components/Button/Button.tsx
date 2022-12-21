@@ -1,6 +1,5 @@
 import React from "react";
 import "./Button.scss";
-
 export interface ButtonProps {
   children?: React.ReactNode; // ReactNode is a type that can be a string, number, boolean, null, undefined, or a React element
   color?:
