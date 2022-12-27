@@ -1,720 +1,739 @@
 @import '../../styles/variables';
 
 .btn {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: $border-radius;
+  font-size: $font-size-base;
+  font-family: $font-family;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  line-height: 2rem;
+  font-weight: 500;
+  display: block;
+  cursor: pointer;
+  transition: $transition;
+
+  // Colors
+  &-blue {
+    background: $blue;
+    color: $white;
+    border-color: $blue;
+
+    &:hover {
+      background: darken($blue, 5%);
+      border-color: darken($blue, 5%);
+    }
+
+    &:active {
+      background: darken($blue, 10%);
+      border-color: darken($blue, 10%);
+    }
+  }
+
+  &-red {
+    background: $red;
+    color: $white;
+    border-color: $red;
+
+    &:hover {
+      background: darken($red, 5%);
+      border-color: darken($red, 5%);
+    }
+
+    &:active {
+      background: darken($red, 10%);
+      border-color: darken($red, 10%);
+    }
+  }
+
+  &-orange {
+    background: $orange;
+    color: $white;
+    border-color: $orange;
+
+    &:hover {
+      background: darken($orange, 5%);
+      border-color: darken($orange, 5%);
+    }
+
+    &:active {
+      background: darken($orange, 10%);
+      border-color: darken($orange, 10%);
+    }
+  }
+
+  &-yellow {
+    background: $yellow;
+    color: $black;
+    border-color: $yellow;
+
+    &:hover {
+      background: darken($yellow, 5%);
+      border-color: darken($yellow, 5%);
+    }
+
+    &:active {
+      background: darken($yellow, 10%);
+      border-color: darken($yellow, 10%);
+    }
+  }
+
+  &-green {
+    background: $green;
+    color: $white;
+    border-color: $green;
+
+    &:hover {
+      background: darken($green, 5%);
+      border-color: darken($green, 5%);
+    }
+
+    &:active {
+      background: darken($green, 10%);
+      border-color: darken($green, 10%);
+    }
+  }
+
+  &-teal {
+    background: $teal;
+    color: $white;
+    border-color: $teal;
+
+    &:hover {
+      background: darken($teal, 5%);
+      border-color: darken($teal, 5%);
+    }
+
+    &:active {
+      background: darken($teal, 10%);
+      border-color: darken($teal, 10%);
+    }
+  }
+
+  &-cyan {
+    background: $cyan;
+    color: $white;
+    border-color: $cyan;
+
+    &:hover {
+      background: darken($cyan, 5%);
+      border-color: darken($cyan, 5%);
+    }
+
+    &:active {
+      background: darken($cyan, 10%);
+      border-color: darken($cyan, 10%);
+    }
+  }
+
+  &-indigo {
+    background: $indigo;
+    color: $white;
+    border-color: $indigo;
+
+    &:hover {
+      background: darken($indigo, 5%);
+      border-color: darken($indigo, 5%);
+    }
+
+    &:active {
+      background: darken($indigo, 10%);
+      border-color: darken($indigo, 10%);
+    }
+  }
+
+  &-purple {
+    background: $purple;
+    color: $white;
+    border-color: $purple;
+
+    &:hover {
+      background: darken($purple, 5%);
+      border-color: darken($purple, 5%);
+    }
+
+    &:active {
+      background: darken($purple, 10%);
+      border-color: darken($purple, 10%);
+    }
+  }
+
+  &-pink {
+    background: $pink;
+    color: $white;
+    border-color: $pink;
+
+    &:hover {
+      background: darken($pink, 5%);
+      border-color: darken($pink, 5%);
+    }
+
+    &:active {
+      background: darken($pink, 10%);
+      border-color: darken($pink, 10%);
+    }
+  }
+
+  &-light {
+    background: $white;
+    color: $black;
+    border-color: $white;
+
+    &:hover {
+      background: darken($white, 5%);
+      border-color: darken($white, 5%);
+    }
+
+    &:active {
+      background: darken($white, 10%);
+      border-color: darken($white, 10%);
+    }
+  }
+
+  &-dark {
+    background: $black;
+    color: $white;
+    border-color: $black;
+
+    &:hover {
+      background: darken($black, 5%);
+      border-color: darken($black, 5%);
+    }
+
+    &:active {
+      background: darken($black, 10%);
+      border-color: darken($black, 10%);
+    }
+  }
+
+  &-gray {
+    background: $gray;
+    color: $black;
+    border-color: $gray;
+
+    &:hover {
+      background: darken($gray, 5%);
+      border-color: darken($gray, 5%);
+    }
+
+    &:active {
+      background: darken($gray, 10%);
+      border-color: darken($gray, 10%);
+    }
+  }
+
+  // Sizes
+  &-sm {
+    padding-left: .5rem;
+    padding-right: .5rem;
+    line-height: 1.5rem;
+    font-size: .875rem;
+
+    &.btn-icon {
+      padding-left: .5rem;
+      padding-right: .5rem;
+      padding-bottom: .5rem;
+      padding-top: .5rem;
+    }
+  }
+
+  &-lg {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    line-height: 2.5rem;
+    font-size: 1rem;
+
+    &.btn-icon {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      padding-bottom: 1.25rem;
+      padding-top: 1.25rem;
+    }
+  }
+
+  // Variant
+  &-outline-blue {
     background: transparent;
-    border: 1px solid transparent;
-    border-radius: $border-radius;
-    font-size: $font-size-base;
-    font-family: $font-family;
-    padding-left: .75rem;
-    padding-right: .75rem;
-    line-height: 2rem;
-    font-weight: 500;
+    color: $blue;
+    border-color: $blue;
+
+    &:hover {
+      background: $blue;
+      color: $white;
+      border-color: $blue;
+    }
+
+    &:active {
+      background: darken($blue, 5%);
+      color: $white;
+      border-color: darken($blue, 5%);
+    }
+  }
+
+  &-outline-red {
+    background: transparent;
+    color: $red;
+    border-color: $red;
+
+    &:hover {
+      background: $red;
+      color: $white;
+      border-color: $red;
+    }
+
+    &:active {
+      background: darken($red, 5%);
+      color: $white;
+      border-color: darken($red, 5%);
+    }
+  }
+
+  &-outline-orange {
+    background: transparent;
+    color: $orange;
+    border-color: $orange;
+
+    &:hover {
+      background: $orange;
+      color: $white;
+      border-color: $orange;
+    }
+
+    &:active {
+      background: darken($orange, 5%);
+      color: $white;
+      border-color: darken($orange, 5%);
+    }
+  }
+
+  &-outline-yellow {
+    background: transparent;
+    color: $yellow;
+    border-color: $yellow;
+
+    &:hover {
+      background: $yellow;
+      color: $black;
+      border-color: $yellow;
+    }
+
+    &:active {
+      background: darken($yellow, 5%);
+      color: $black;
+      border-color: darken($yellow, 5%);
+    }
+  }
+
+  &-outline-green {
+    background: transparent;
+    color: $green;
+    border-color: $green;
+
+    &:hover {
+      background: $green;
+      color: $white;
+      border-color: $green;
+    }
+
+    &:active {
+      background: darken($green, 5%);
+      color: $white;
+      border-color: darken($green, 5%);
+    }
+  }
+
+  &-outline-teal {
+    background: transparent;
+    color: $teal;
+    border-color: $teal;
+
+    &:hover {
+      background: $teal;
+      color: $white;
+      border-color: $teal;
+    }
+
+    &:active {
+      background: darken($teal, 5%);
+      color: $white;
+      border-color: darken($teal, 5%);
+    }
+  }
+
+  &-outline-cyan {
+    background: transparent;
+    color: $cyan;
+    border-color: $cyan;
+
+    &:hover {
+      background: $cyan;
+      color: $white;
+      border-color: $cyan;
+    }
+
+    &:active {
+      background: darken($cyan, 5%);
+      color: $white;
+      border-color: darken($cyan, 5%);
+    }
+  }
+
+  &-outline-indigo {
+    background: transparent;
+    color: $indigo;
+    border-color: $indigo;
+
+    &:hover {
+      background: $indigo;
+      color: $white;
+      border-color: $indigo;
+    }
+
+    &:active {
+      background: darken($indigo, 5%);
+      color: $white;
+      border-color: darken($indigo, 5%);
+    }
+  }
+
+  &-outline-purple {
+    background: transparent;
+    color: $purple;
+    border-color: $purple;
+
+    &:hover {
+      background: $purple;
+      color: $white;
+      border-color: $purple;
+    }
+
+    &:active {
+      background: darken($purple, 5%);
+      color: $white;
+      border-color: darken($purple, 5%);
+    }
+  }
+
+  &-outline-pink {
+    background: transparent;
+    color: $pink;
+    border-color: $pink;
+
+    &:hover {
+      background: $pink;
+      color: $white;
+      border-color: $pink;
+    }
+
+    &:active {
+      background: darken($pink, 5%);
+      color: $white;
+      border-color: darken($pink, 5%);
+    }
+  }
+
+  &-outline-light {
+    background: transparent;
+    color: $black;
+    border-color: darken($white, 5%);
+
+    &:hover {
+      background: darken($white, 5%);
+      color: $black;
+      border-color: darken($white, 5%);
+    }
+
+    &:active {
+      background: darken($white, 10%);
+      color: $black;
+      border-color: darken($white, 10%);
+    }
+  }
+
+  &-outline-dark {
+    background: transparent;
+    color: $black;
+    border-color: $black;
+
+    &:hover {
+      background: $black;
+      color: $white;
+      border-color: $black;
+    }
+
+    &:active {
+      background: darken($black, 5%);
+      color: $white;
+      border-color: darken($black, 5%);
+    }
+  }
+
+  &-outline-gray {
+    background: transparent;
+    color: $black;
+    border-color: $gray;
+
+    &:hover {
+      background: $gray;
+      color: $black;
+      border-color: $gray;
+    }
+
+    &:active {
+      background: darken($gray, 5%);
+      color: $black;
+      border-color: darken($gray, 5%);
+    }
+  }
+
+  &-ghost-blue {
+    background: rgba($blue, 0.1);
+    color: $blue;
+    border-color: transparent;
+
+    &:hover {
+      background: rgba($blue, 0.2);
+      color: $blue;
+      border-color: transparent;
+    }
+
+    &:active {
+      background: rgba($blue, 0.3);
+      color: $blue;
+      border-color: transparent;
+    }
+  }
+
+  &-ghost-red {
+    background: rgba($red, 0.1);
+    color: $red;
+    border-color: transparent;
+
+    &:hover {
+      background: rgba($red, 0.2);
+      color: $red;
+      border-color: transparent;
+    }
+
+    &:active {
+      background: rgba($red, 0.3);
+      color: $red;
+      border-color: transparent;
+    }
+  }
+
+  &-ghost-orange {
+    background: rgba($orange, 0.1);
+    color: $orange;
+    border-color: transparent;
+
+    &:hover {
+      background: rgba($orange, 0.2);
+      color: $orange;
+      border-color: transparent;
+    }
+
+    &:active {
+      background: rgba($orange, 0.3);
+      color: $orange;
+      border-color: transparent;
+    }
+  }
+
+  &-ghost-yellow {
+    background: rgba($yellow, 0.1);
+    color: $yellow;
+    border-color: transparent;
+
+    &:hover {
+      background: rgba($yellow, 0.2);
+      color: $yellow;
+      border-color: transparent;
+    }
+
+    &:active {
+      background: rgba($yellow, 0.3);
+      color: $yellow;
+      border-color: transparent;
+    }
+  }
+
+  &-ghost-green {
+    background: rgba($green, 0.1);
+    color: $green;
+    border-color: transparent;
+
+    &:hover {
+      background: rgba($green, 0.2);
+      color: $green;
+      border-color: transparent;
+    }
+
+    &:active {
+      background: rgba($green, 0.3);
+      color: $green;
+      border-color: transparent;
+    }
+  }
+
+  &-ghost-teal {
+    background: rgba($teal, 0.1);
+    color: $teal;
+    border-color: transparent;
+
+    &:hover {
+      background: rgba($teal, 0.2);
+      color: $teal;
+      border-color: transparent;
+    }
+
+    &:active {
+      background: rgba($teal, 0.3);
+      color: $teal;
+      border-color: transparent;
+    }
+  }
+
+  &-ghost-cyan {
+    background: rgba($cyan, 0.1);
+    color: $cyan;
+    border-color: transparent;
+
+    &:hover {
+      background: rgba($cyan, 0.2);
+      color: $cyan;
+      border-color: transparent;
+    }
+
+    &:active {
+      background: rgba($cyan, 0.3);
+      color: $cyan;
+      border-color: transparent;
+    }
+  }
+
+  &-ghost-indigo {
+    background: rgba($indigo, 0.1);
+    color: $indigo;
+    border-color: transparent;
+
+    &:hover {
+      background: rgba($indigo, 0.2);
+      color: $indigo;
+      border-color: transparent;
+    }
+
+    &:active {
+      background: rgba($indigo, 0.3);
+      color: $indigo;
+      border-color: transparent;
+    }
+  }
+
+  &-ghost-purple {
+    background: rgba($purple, 0.1);
+    color: $purple;
+    border-color: transparent;
+
+    &:hover {
+      background: rgba($purple, 0.2);
+      color: $purple;
+      border-color: transparent;
+    }
+
+    &:active {
+      background: rgba($purple, 0.3);
+      color: $purple;
+      border-color: transparent;
+    }
+  }
+
+  &-ghost-pink {
+    background: rgba($pink, 0.1);
+    color: $pink;
+    border-color: transparent;
+
+    &:hover {
+      background: rgba($pink, 0.2);
+      color: $pink;
+      border-color: transparent;
+    }
+
+    &:active {
+      background: rgba($pink, 0.3);
+      color: $pink;
+      border-color: transparent;
+    }
+  }
+
+  &-ghost-light {
+    background: darken($white, 5%);
+    color: $black;
+    border-color: transparent;
+
+    &:hover {
+      background: darken($white, 7.5%);
+      color: $black;
+      border-color: transparent;
+    }
+
+    &:active {
+      background: darken($white, 10%);
+      color: $black;
+      border-color: transparent;
+    }
+  }
+
+  &-ghost-dark {
+    background: rgba($black, 0.1);
+    color: $black;
+    border-color: transparent;
+
+    &:hover {
+      background: rgba($black, 0.2);
+      color: $black;
+      border-color: transparent;
+    }
+
+    &:active {
+      background: rgba($black, 0.3);
+      color: $black;
+      border-color: transparent;
+    }
+  }
+
+  &-ghost-gray {
+    background: rgba($gray, 0.3);
+    color: darken($gray, 25%);
+    border-color: transparent;
+
+    &:hover {
+      background: rgba($gray, 0.5);
+      color: darken($gray, 25%);
+      border-color: transparent;
+    }
+
+    &:active {
+      background: rgba($gray, 0.7);
+      color: darken($gray, 25%);
+      border-color: transparent;
+    }
+  }
+
+  // Block
+  &-block {
     display: block;
-    cursor: pointer;
-    transition: $transition;
-
-    // Colors
-    &-blue {
-        background: $blue;
-        color: $white;
-        border-color: $blue;
-
-        &:hover {
-            background: darken($blue, 5%);
-            border-color: darken($blue, 5%);
-        }
-
-        &:active {
-            background: darken($blue, 10%);
-            border-color: darken($blue, 10%);
-        }
-    }
-
-    &-red {
-        background: $red;
-        color: $white;
-        border-color: $red;
-
-        &:hover {
-            background: darken($red, 5%);
-            border-color: darken($red, 5%);
-        }
-
-        &:active {
-            background: darken($red, 10%);
-            border-color: darken($red, 10%);
-        }
-    }
-
-    &-orange {
-        background: $orange;
-        color: $white;
-        border-color: $orange;
-
-        &:hover {
-            background: darken($orange, 5%);
-            border-color: darken($orange, 5%);
-        }
-
-        &:active {
-            background: darken($orange, 10%);
-            border-color: darken($orange, 10%);
-        }
-    }
-
-    &-yellow {
-        background: $yellow;
-        color: $black;
-        border-color: $yellow;
-
-        &:hover {
-            background: darken($yellow, 5%);
-            border-color: darken($yellow, 5%);
-        }
-
-        &:active {
-            background: darken($yellow, 10%);
-            border-color: darken($yellow, 10%);
-        }
-    }
-
-    &-green {
-        background: $green;
-        color: $white;
-        border-color: $green;
-
-        &:hover {
-            background: darken($green, 5%);
-            border-color: darken($green, 5%);
-        }
-
-        &:active {
-            background: darken($green, 10%);
-            border-color: darken($green, 10%);
-        }
-    }
-
-    &-teal {
-        background: $teal;
-        color: $white;
-        border-color: $teal;
-
-        &:hover {
-            background: darken($teal, 5%);
-            border-color: darken($teal, 5%);
-        }
-
-        &:active {
-            background: darken($teal, 10%);
-            border-color: darken($teal, 10%);
-        }
-    }
-
-    &-cyan {
-        background: $cyan;
-        color: $white;
-        border-color: $cyan;
-
-        &:hover {
-            background: darken($cyan, 5%);
-            border-color: darken($cyan, 5%);
-        }
-
-        &:active {
-            background: darken($cyan, 10%);
-            border-color: darken($cyan, 10%);
-        }
-    }
-
-    &-indigo {
-        background: $indigo;
-        color: $white;
-        border-color: $indigo;
-
-        &:hover {
-            background: darken($indigo, 5%);
-            border-color: darken($indigo, 5%);
-        }
-
-        &:active {
-            background: darken($indigo, 10%);
-            border-color: darken($indigo, 10%);
-        }
-    }
-
-    &-purple {
-        background: $purple;
-        color: $white;
-        border-color: $purple;
-
-        &:hover {
-            background: darken($purple, 5%);
-            border-color: darken($purple, 5%);
-        }
-
-        &:active {
-            background: darken($purple, 10%);
-            border-color: darken($purple, 10%);
-        }
-    }
-
-    &-pink {
-        background: $pink;
-        color: $white;
-        border-color: $pink;
-
-        &:hover {
-            background: darken($pink, 5%);
-            border-color: darken($pink, 5%);
-        }
-
-        &:active {
-            background: darken($pink, 10%);
-            border-color: darken($pink, 10%);
-        }
-    }
-
-    &-light {
-        background: $white;
-        color: $black;
-        border-color: $white;
-
-        &:hover {
-            background: darken($white, 5%);
-            border-color: darken($white, 5%);
-        }
-
-        &:active {
-            background: darken($white, 10%);
-            border-color: darken($white, 10%);
-        }
-    }
-
-    &-dark {
-        background: $black;
-        color: $white;
-        border-color: $black;
-
-        &:hover {
-            background: darken($black, 5%);
-            border-color: darken($black, 5%);
-        }
-
-        &:active {
-            background: darken($black, 10%);
-            border-color: darken($black, 10%);
-        }
-    }
-
-    &-gray {
-        background: $gray;
-        color: $black;
-        border-color: $gray;
-
-        &:hover {
-            background: darken($gray, 5%);
-            border-color: darken($gray, 5%);
-        }
-
-        &:active {
-            background: darken($gray, 10%);
-            border-color: darken($gray, 10%);
-        }
-    }
-
-    // Sizes
-    &-sm {
-        padding-left: .5rem;
-        padding-right: .5rem;
-        line-height: 1.5rem;
-        font-size: .875rem;
-    }
-
-    &-lg {
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
-        line-height: 2.5rem;
-        font-size: 1rem;
-    }
-
-    // Variant
-    &-outline-blue {
-        background: transparent;
-        color: $blue;
-        border-color: $blue;
-
-        &:hover {
-            background: $blue;
-            color: $white;
-            border-color: $blue;
-        }
-
-        &:active {
-            background: darken($blue, 5%);
-            color: $white;
-            border-color: darken($blue, 5%);
-        }
-    }
-
-    &-outline-red {
-        background: transparent;
-        color: $red;
-        border-color: $red;
-
-        &:hover {
-            background: $red;
-            color: $white;
-            border-color: $red;
-        }
-
-        &:active {
-            background: darken($red, 5%);
-            color: $white;
-            border-color: darken($red, 5%);
-        }
-    }
-
-    &-outline-orange {
-        background: transparent;
-        color: $orange;
-        border-color: $orange;
-
-        &:hover {
-            background: $orange;
-            color: $white;
-            border-color: $orange;
-        }
-
-        &:active {
-            background: darken($orange, 5%);
-            color: $white;
-            border-color: darken($orange, 5%);
-        }
-    }
-
-    &-outline-yellow {
-        background: transparent;
-        color: $yellow;
-        border-color: $yellow;
-
-        &:hover {
-            background: $yellow;
-            color: $black;
-            border-color: $yellow;
-        }
-
-        &:active {
-            background: darken($yellow, 5%);
-            color: $black;
-            border-color: darken($yellow, 5%);
-        }
-    }
-
-    &-outline-green {
-        background: transparent;
-        color: $green;
-        border-color: $green;
-
-        &:hover {
-            background: $green;
-            color: $white;
-            border-color: $green;
-        }
-
-        &:active {
-            background: darken($green, 5%);
-            color: $white;
-            border-color: darken($green, 5%);
-        }
-    }
-
-    &-outline-teal {
-        background: transparent;
-        color: $teal;
-        border-color: $teal;
-
-        &:hover {
-            background: $teal;
-            color: $white;
-            border-color: $teal;
-        }
-
-        &:active {
-            background: darken($teal, 5%);
-            color: $white;
-            border-color: darken($teal, 5%);
-        }
-    }
-
-    &-outline-cyan {
-        background: transparent;
-        color: $cyan;
-        border-color: $cyan;
-
-        &:hover {
-            background: $cyan;
-            color: $white;
-            border-color: $cyan;
-        }
-
-        &:active {
-            background: darken($cyan, 5%);
-            color: $white;
-            border-color: darken($cyan, 5%);
-        }
-    }
-
-    &-outline-indigo {
-        background: transparent;
-        color: $indigo;
-        border-color: $indigo;
-
-        &:hover {
-            background: $indigo;
-            color: $white;
-            border-color: $indigo;
-        }
-
-        &:active {
-            background: darken($indigo, 5%);
-            color: $white;
-            border-color: darken($indigo, 5%);
-        }
-    }
-
-    &-outline-purple {
-        background: transparent;
-        color: $purple;
-        border-color: $purple;
-
-        &:hover {
-            background: $purple;
-            color: $white;
-            border-color: $purple;
-        }
-
-        &:active {
-            background: darken($purple, 5%);
-            color: $white;
-            border-color: darken($purple, 5%);
-        }
-    }
-
-    &-outline-pink {
-        background: transparent;
-        color: $pink;
-        border-color: $pink;
-
-        &:hover {
-            background: $pink;
-            color: $white;
-            border-color: $pink;
-        }
-
-        &:active {
-            background: darken($pink, 5%);
-            color: $white;
-            border-color: darken($pink, 5%);
-        }
-    }
-
-    &-outline-light {
-        background: transparent;
-        color: $black;
-        border-color: darken($white, 5%);
-
-        &:hover {
-            background: darken($white, 5%);
-            color: $black;
-            border-color: darken($white, 5%);
-        }
-
-        &:active {
-            background: darken($white, 10%);
-            color: $black;
-            border-color: darken($white, 10%);
-        }
-    }
-
-    &-outline-dark {
-        background: transparent;
-        color: $black;
-        border-color: $black;
-
-        &:hover {
-            background: $black;
-            color: $white;
-            border-color: $black;
-        }
-
-        &:active {
-            background: darken($black, 5%);
-            color: $white;
-            border-color: darken($black, 5%);
-        }
-    }
-
-    &-outline-gray {
-        background: transparent;
-        color: $black;
-        border-color: $gray;
-
-        &:hover {
-            background: $gray;
-            color: $black;
-            border-color: $gray;
-        }
-
-        &:active {
-            background: darken($gray, 5%);
-            color: $black;
-            border-color: darken($gray, 5%);
-        }
-    }
-
-    &-ghost-blue {
-        background: rgba($blue, 0.1);
-        color: $blue;
-        border-color: transparent;
-
-        &:hover {
-            background: rgba($blue, 0.2);
-            color: $blue;
-            border-color: transparent;
-        }
-
-        &:active {
-            background: rgba($blue, 0.3);
-            color: $blue;
-            border-color: transparent;
-        }
-    }
-
-    &-ghost-red {
-        background: rgba($red, 0.1);
-        color: $red;
-        border-color: transparent;
-
-        &:hover {
-            background: rgba($red, 0.2);
-            color: $red;
-            border-color: transparent;
-        }
-
-        &:active {
-            background: rgba($red, 0.3);
-            color: $red;
-            border-color: transparent;
-        }
-    }
-
-    &-ghost-orange {
-        background: rgba($orange, 0.1);
-        color: $orange;
-        border-color: transparent;
-
-        &:hover {
-            background: rgba($orange, 0.2);
-            color: $orange;
-            border-color: transparent;
-        }
-
-        &:active {
-            background: rgba($orange, 0.3);
-            color: $orange;
-            border-color: transparent;
-        }
-    }
-
-    &-ghost-yellow {
-        background: rgba($yellow, 0.1);
-        color: $yellow;
-        border-color: transparent;
-
-        &:hover {
-            background: rgba($yellow, 0.2);
-            color: $yellow;
-            border-color: transparent;
-        }
-
-        &:active {
-            background: rgba($yellow, 0.3);
-            color: $yellow;
-            border-color: transparent;
-        }
-    }
-
-    &-ghost-green {
-        background: rgba($green, 0.1);
-        color: $green;
-        border-color: transparent;
-
-        &:hover {
-            background: rgba($green, 0.2);
-            color: $green;
-            border-color: transparent;
-        }
-
-        &:active {
-            background: rgba($green, 0.3);
-            color: $green;
-            border-color: transparent;
-        }
-    }
-
-    &-ghost-teal {
-        background: rgba($teal, 0.1);
-        color: $teal;
-        border-color: transparent;
-
-        &:hover {
-            background: rgba($teal, 0.2);
-            color: $teal;
-            border-color: transparent;
-        }
-
-        &:active {
-            background: rgba($teal, 0.3);
-            color: $teal;
-            border-color: transparent;
-        }
-    }
-
-    &-ghost-cyan {
-        background: rgba($cyan, 0.1);
-        color: $cyan;
-        border-color: transparent;
-
-        &:hover {
-            background: rgba($cyan, 0.2);
-            color: $cyan;
-            border-color: transparent;
-        }
-
-        &:active {
-            background: rgba($cyan, 0.3);
-            color: $cyan;
-            border-color: transparent;
-        }
-    }
-
-    &-ghost-indigo {
-        background: rgba($indigo, 0.1);
-        color: $indigo;
-        border-color: transparent;
-
-        &:hover {
-            background: rgba($indigo, 0.2);
-            color: $indigo;
-            border-color: transparent;
-        }
-
-        &:active {
-            background: rgba($indigo, 0.3);
-            color: $indigo;
-            border-color: transparent;
-        }
-    }
-
-    &-ghost-purple {
-        background: rgba($purple, 0.1);
-        color: $purple;
-        border-color: transparent;
-
-        &:hover {
-            background: rgba($purple, 0.2);
-            color: $purple;
-            border-color: transparent;
-        }
-
-        &:active {
-            background: rgba($purple, 0.3);
-            color: $purple;
-            border-color: transparent;
-        }
-    }
-
-    &-ghost-pink {
-        background: rgba($pink, 0.1);
-        color: $pink;
-        border-color: transparent;
-
-        &:hover {
-            background: rgba($pink, 0.2);
-            color: $pink;
-            border-color: transparent;
-        }
-
-        &:active {
-            background: rgba($pink, 0.3);
-            color: $pink;
-            border-color: transparent;
-        }
-    }
-
-    &-ghost-light {
-        background: darken($white, 5%);
-        color: $black;
-        border-color: transparent;
-
-        &:hover {
-            background: darken($white, 7.5%);
-            color: $black;
-            border-color: transparent;
-        }
-
-        &:active {
-            background: darken($white, 10%);
-            color: $black;
-            border-color: transparent;
-        }
-    }
-
-    &-ghost-dark {
-        background: rgba($black, 0.1);
-        color: $black;
-        border-color: transparent;
-
-        &:hover {
-            background: rgba($black, 0.2);
-            color: $black;
-            border-color: transparent;
-        }
-
-        &:active {
-            background: rgba($black, 0.3);
-            color: $black;
-            border-color: transparent;
-        }
-    }
-
-    &-ghost-gray {
-        background: rgba($gray, 0.3);
-        color: darken($gray, 25%);
-        border-color: transparent;
-
-        &:hover {
-            background: rgba($gray, 0.5);
-            color: darken($gray, 25%);
-            border-color: transparent;
-        }
-
-        &:active {
-            background: rgba($gray, 0.7);
-            color: darken($gray, 25%);
-            border-color: transparent;
-        }
-    }
-
-    // Block
-    &-block {
-        display: block;
-        width: 100%;
-    }
-
-    // Disabled
-    &-disabled {
-        opacity: 0.5;
-    }
+    width: 100%;
+  }
+
+  // Disabled
+  &-disabled {
+    opacity: 0.5;
+  }
+
+  &-icon {
+    padding: .75rem;
+    line-height: 1;
+  }
 }

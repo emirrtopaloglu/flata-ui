@@ -19,6 +19,7 @@ export interface ButtonProps {
   size?: "sm" | "md" | "lg"; // md is default
   variant?: "solid" | "outline" | "ghost"; // solid is default
   block?: boolean;
+  icon?: boolean;
   disabled?: boolean;
   onClick?: () => void;
   className?: string;
@@ -31,6 +32,7 @@ const Button = (props: ButtonProps) => {
     size,
     variant,
     block,
+    icon,
     disabled,
     onClick,
     className
@@ -41,9 +43,11 @@ const Button = (props: ButtonProps) => {
   size ? classes.push(`btn-${size}`) : "";
   variant ? classes.push(`btn-${variant}-${color}`) : "";
   block ? classes.push("btn-block") : "";
+  icon ? classes.push("btn-icon") : "";
   disabled ? classes.push("btn-disabled") : "";
   className ? className.split(" ").map((c: string) => classes.push(c)) : "";
 
+  
   return (
     <button
       className={classes.join(" ")}
